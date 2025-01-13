@@ -1,0 +1,93 @@
+
+.navigation {
+       font-size: 14px;
+.leftSide {
+       .logo {
+              .egy {
+                     font-family: var(--English);
+                     font-weight: 200;
+
+
+                     .strong {
+                            font-weight: 500;
+                     }
+              }
+       }
+
+
+       .icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 500;
+       }
+}
+
+.rightSide {
+       // .lineHover {
+       //        height: 3px;
+       //        width: 70px;
+       //        position: absolute;
+       //        bottom: -10px;
+       //        background: #FF6600;
+       // }
+
+       // .menu:hover > .lineHover {
+       //        transform: scale3d(1);
+       // }
+
+       .link {
+              // min-width: 40px;
+              // position: relative;
+              font-weight: 500;
+
+              // &::before {
+              //        content: '';
+              //        position: absolute;
+              //        bottom: -10px;
+              //        right: 0;
+              //        left: 0;
+              //        background: #FF6600;
+              //        width: 0;
+              //        margin: auto;
+              //        height: 2px;
+              //        border-radius: 20px;
+              // }
+
+              // // &:nth-child(1):hover + .lineHover {
+              // //        right: 0;
+              // // }
+       }
+
+       &:hover .lineHover {
+              transform: scaleX(1);
+       }
+
+       .lineHover{
+              position: absolute;
+              height: 3px;
+              bottom: -10px;
+              background: #FF6600;
+              width: 100%;
+              transition: all 0.3s ease-in-out;
+              transform: scaleX(0);
+       }
+
+       .login {
+              background: #181818;
+              padding: 10px 20px;
+              color: #fff;
+              border-radius: 10px;
+              transition: var(--transition);
+
+              // &:hover {
+              //        transform: scale(0.95);
+              // }
+
+              .span {
+                     border-right: 1px solid #fff5;
+                     padding-right: 15px;
+              }
+       }
+}
+}

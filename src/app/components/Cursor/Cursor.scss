@@ -1,0 +1,26 @@
+%cursorStyle {
+       position: fixed;
+       top: 0;
+       left: 0;
+       transform: translate(-50%,-50%);
+       border-radius: 50%;
+       // z-index: 1;
+}
+
+.cursor {
+       height: 30px;
+       width: 30px;
+       border: 1px solid #FF6600;
+       transition: 0.1s;       
+       @extend %cursorStyle;
+}
+
+.cursor2 {
+       height: 8px;
+       width: 8px;
+       background: #FF6600;
+       transition: 0.2s;
+       // transition: 0.1s;       
+
+       @extend %cursorStyle;
+}

@@ -1,0 +1,26 @@
+.offers_4G {
+       padding: 20px;
+       transform: translateY(-50%);
+       background: #fff;
+       border: 1px solid rgba(153, 153, 153, 0.205);
+       box-shadow: 2px 2px 20px #0005;
+       
+       .rightSide {
+              border-left: 1px solid #DDD2D2;
+              padding-left: 60px;
+
+              h2 {
+                     color: #FF6600;
+              }
+              
+              ul {
+                     list-style: circle;
+                     padding-right: 70px;
+       
+                     li {
+                            font-size: 14px;
+                     }
+              }
+       }
+
+}
