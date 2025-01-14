@@ -75,7 +75,7 @@ export default function NavigationBar() {
               <div className={`${stylesNavigation.rightSide} | hidden lg:flex items-center justify-between`}>
                      {/* navigation menu */}
                      <menu className='flex items-center justify-center gap-7 ms-7 relative' style={{direction: 'rtl'}}>
-                            { navLinks.navigation.map((link,index) => (
+                            {navLinks.navigation.map((link,index) => (
                                    <li key={index}>
                                           <Link className={`${stylesNavigation.link} | flex items-center justify-center`} 
                                           href={link.path} onMouseMove={(e) => handleIndicator(e.currentTarget)}>

@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image";
 //imports images slider offers 
-import slide1 from '../../../../public/images/FreeMax-Ruby-Portal-825x340-Shopping.webp'
-import slide2 from '../../../../public/images/elkebeer.webp'
-import slide3 from '../../../../public/images/Orange Portal.webp'
-import slide4 from '../../../../public/images/afreh kedh kedh.webp'
+// import slide1 from '../../../../public/images/FreeMax-Ruby-Portal-825x340-Shopping.webp'
+// import slide2 from '../../../../public/images/elkebeer.webp'
+// import slide3 from '../../../../public/images/Orange Portal.webp'
+// import slide4 from '../../../../public/images/afreh kedh kedh.webp'
 // import library swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -13,31 +13,43 @@ import "swiper/css";
 // import style sheet scss slider 
 import stylesSlider from  './Slider.module.scss'
 
+interface img {
+       props: {
+              className?:string,
+              src: {
+                     src:string,
+                     width:number,
+                     height:number
+              },
+              alt:string
+       }
+
+}
+interface slider {
+       children: img[],
+       countSlide:number
+}
 
 
-export default function Slider() {
+export default function Slider({children,countSlide}:slider) {
+       console.log(children)
        return (
-              <Swiper className={`${stylesSlider.slider} | mySwiper`} modules={[Autoplay]} autoplay={{delay: 3000, disableOnInteraction: false}}>
-                     <SwiperSlide className="px-3"><Image className="w-full h-full object-cover rounded-lg" src={slide1} alt="ads" loading="lazy" /></SwiperSlide>
-                     <SwiperSlide className="px-3"><Image className="w-full h-full object-cover rounded-lg" src={slide2} alt="ads" loading="lazy" /></SwiperSlide>
-                     <SwiperSlide className="px-3"><Image className="w-full h-full object-cover rounded-lg" src={slide3} alt="ads" loading="lazy" /></SwiperSlide>
-                     <SwiperSlide className="px-3"><Image className="w-full h-full object-cover rounded-lg" src={slide4} alt="ads" loading="lazy" /></SwiperSlide>
-
-                     {/* {images.map(function(image , index){
+              <Swiper className={`${stylesSlider.slider} | mySwiper`} modules={[Autoplay]} slidesPerView={countSlide} breakpoints={{0: { slidesPerView: 1 },700: { slidesPerView: 2 },1000: { slidesPerView: countSlide }}} autoplay={{delay: 3000, disableOnInteraction: false}}>
+                     {children.map((img, index) => {
+                     if(img.props && img.props.src){
                             return (
                                    <SwiperSlide key={index} className="px-3">
-                                          <Image className="w-full h-full object-cover rounded-lg" src={image.image} alt={image.alt} loading="lazy" />
+                                          <Image className={`${img.props.className} w-full h-full object-cover rounded-lg`} 
+                                                 src={img.props.src.src} 
+                                                 alt={img.props.alt} 
+                                                 loading="lazy" 
+                                                 width={img.props.src.width} 
+                                                 height={img.props.src.height} 
+                                          />
                                    </SwiperSlide>
                             )
-                     })} */}
-
-                     {/* {images.map(function(image){
-                            return (
-                                   <SwiperSlide key={image.id} className="px-3">
-                                          <Image className="w-full h-full object-cover rounded-lg" src={image.image} alt={image.alt} loading="lazy" />
-                                   </SwiperSlide>
-                            )
-                     })} */}
+                     }
+                     })}                     
               </Swiper>
        );
 }
