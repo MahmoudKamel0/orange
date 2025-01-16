@@ -11,34 +11,27 @@ import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 // import style sheet scss slider 
-import stylesSlider from  './Slider.module.scss'
-
-interface img {
-       props: {
-              className?:string,
-              src: {
-                     src:string,
-                     width:number,
-                     height:number
-              },
-              alt:string
-       }
-
-}
-interface slider {
-       children: img[],
-       countSlide:number
-}
+import stylesSlider from  './SliderPhotos.module.scss'
+import { sliderPhotos} from "@/app/types/types";
 
 
-export default function Slider({children,countSlide}:slider) {
-       console.log(children)
+
+
+export default function SliderPhotos({children,countSlide}:sliderPhotos) {
+       // console.log(children)
        return (
-              <Swiper className={`${stylesSlider.slider} | mySwiper`} modules={[Autoplay]} slidesPerView={countSlide} breakpoints={{0: { slidesPerView: 1 },700: { slidesPerView: 2 },1000: { slidesPerView: countSlide }}} autoplay={{delay: 3000, disableOnInteraction: false}}>
+              <Swiper className={`${stylesSlider.slider} | mySwiper`} 
+                     modules={[Autoplay]} 
+                     breakpoints= {{
+                            0: { slidesPerView: countSlide.sm },
+                            700: { slidesPerView: countSlide.md || countSlide.sm },
+                            1000: { slidesPerView: countSlide.lg || countSlide.md || countSlide.sm}}} 
+                     autoplay={{delay: 3000, disableOnInteraction: false}}
+              >
                      {children.map((img, index) => {
                      if(img.props && img.props.src){
                             return (
-                                   <SwiperSlide key={index} className="px-3">
+                                   <SwiperSlide key={index} className="px-3 -z-10 relative">
                                           <Image className={`${img.props.className} w-full h-full object-cover rounded-lg`} 
                                                  src={img.props.src.src} 
                                                  alt={img.props.alt} 
