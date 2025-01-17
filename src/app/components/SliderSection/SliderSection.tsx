@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import { sliderSection } from "@/app/types/types";
+import Link from "next/link";
 // import style sheet scss slider 
 
 
@@ -16,7 +17,6 @@ export default function SliderSection({children , countSlide}:sliderSection) {
 
        return (
               <Swiper className={` | mySwiper !h-full`} 
-                     dir='ltr'
                      modules={[Autoplay]} 
                      breakpoints= {{
                             0: { slidesPerView: countSlide.sm },
@@ -28,7 +28,7 @@ export default function SliderSection({children , countSlide}:sliderSection) {
                      if(section.props){
                             return (
                                    <SwiperSlide key={index} className="px-3 -z-10 relative h-full">
-                                          <>{section.props.children}</>
+                                          <Link href='/'><>{section.props.children}</></Link>
                                    </SwiperSlide>
                             )
                      }

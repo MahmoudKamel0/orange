@@ -32,16 +32,14 @@
 .title {
        margin-bottom: 30px;
 
-       .info {
-              border: 3px solid #FF6600;
-              background: red;
-       }
+
+       
 
        // h2 {
        //        // border-inline-start: 3px solid #FF6600;
        //        // padding-inline-start: 13px;
-       //        padding: 7px 13px;
-       //        font-size: 17px;
+              // padding: 7px 13px;
+              // font-size: 14px;
        // }
 
        // a {
@@ -50,6 +48,10 @@
        //        padding: 7px 13px;
 
        // }
+
+       div {
+              border-inline: 3px solid #FF6600;
+       }
 }
 
 .myOrange {
@@ -60,7 +62,7 @@
 
        h2 {
               font: {
-                     size: 32px;
+                     size: 40px;
                      weight: bold;
               };
               color: #FF6600;
