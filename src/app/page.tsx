@@ -17,11 +17,13 @@ import services from '../../public/images/services internet .png'
 import services2 from '../../public/images/services 2.png'
 import SliderSection from "./components/SliderSection/SliderSection";
 import planer from '../../public/images/planer.png' 
+import Link from "next/link"
+import phone from '../../public/images/phone.png'
 
 export default function Home() {
        return (
               <>
-                     <section id="hero">
+                     <section id="hero" className="h-screen">
                      <SliderPhotos countSlide={{sm:1}}>
                             <Image src={slideHero1} alt="ads" />
                             <Image src={slideHero2} alt="ads" />
@@ -33,7 +35,6 @@ export default function Home() {
 
                      <section id="offer-package-4G" className={`${stylesHome.offers_4G} | 
                      flex flex-col lg:flex-row items-center justify-center lg:justify-between w-3/4 m-auto relative z-10 rounded-lg`}>
-                            <Image className="pe-8" src={offers4G} alt="offer package 4G" loading="lazy" />
                             <div className={`${stylesHome.rightSide} hidden md:block`} dir="rtl">
                                    <h2 className="font-bold">مع خدمات 4G </h2>
                                    <p>مع خدمات الـ 4G، الإنترنت بقى أسرع وأقرب ليك من أي وقت مضى:</p>
@@ -45,47 +46,70 @@ export default function Home() {
                                    </ul>
 
                             </div>
+                            <Image className="pe-8" src={offers4G} alt="offer package 4G" loading="lazy" />
                      </section>
                      
-                     <section id="slider-offers" className="">
+                     <section id="slider-offers" className="h-[270px]">
                      <SliderPhotos countSlide={{sm:1,md:2,lg:3}}>
-                            <Image className="!h-1/2" src={offers1} alt="offers" />
-                            <Image className="!h-1/2" src={offers2} alt="offers" />
-                            <Image className="!h-1/2" src={offers3} alt="offers" />
-                            <Image className="!h-1/2" src={offers4} alt="offers" />
+                            <Image  src={offers1} alt="offers" />
+                            <Image  src={offers2} alt="offers" />
+                            <Image  src={offers3} alt="offers" />
+                            <Image  src={offers4} alt="offers" />
                      </SliderPhotos>
                      </section>
 
                      
 
-                     <section>
+                     <section id="slider-offers" className="mt-20"> 
+                     <div className={`${stylesHome.title} | px-3 w-full `}>
+                     <div className="info | flex items-center justify-between w-full">
+                            <h2 className="lg:w-[450px]">تمتع بأسرع تجربة إنترنت مع أقوى شبكة في مصر  تدعم احتياجاتك اليومية، سواء للعمل أو الترفيه!</h2>
+                            <Link href='/'>عرض المزيد</Link>
+                     </div>
+                     </div>
+
                      <SliderSection countSlide={{sm:1, md:2, lg:2}}>
                             <SectionServices title="Hello" para="das">
-                                   <Image className="!h-1/2" src={services} alt="offers" />
+                                   <Image src={services} alt="offers" />
                             </SectionServices>
 
                             <SectionServices title="Hello" para="das">
-                                   <Image className="!h-1/2" src={services2} alt="offers" />
+                                   <Image src={services2} alt="offers" />
                             </SectionServices>
                      </SliderSection>
                      </section>
+
 
                      <section id="planer" className="h-[298px] px-3 my-20">
                             <Image className="!h-full !w-full object-cover rounded-lg object-right" src={planer} alt="planer" />
                      </section>
 
+
                      <section>
                      <SliderSection countSlide={{sm:1, md:2, lg:2}}>
                             <SectionServices title="Hello" para="das">
-                                   <Image className="!h-1/2" src={services} alt="offers" />
+                                   <Image src={services} alt="offers" />
                             </SectionServices>
 
                             <SectionServices title="Hello" para="das">
-                                   <Image className="!h-1/2" src={services2} alt="offers" />
+                                   <Image src={services2} alt="offers" loading="lazy" />
                             </SectionServices>
                      </SliderSection>
                      </section>
 
+                     
+                     <section id='my-orange' className={`${stylesHome.myOrange} | px-3 min-h-[90vh] flex flex-col-reverse lg:flex-row items-center justify-center lg:justify-between`}>
+                            <div className="txt">
+                                   <h2>حمّل تطبيق My Orange واستمتع بالتحكم الكامل في خطك!</h2>
+                                   <p>مع تطبيق My Orange مصر، استكشف عالمًا من الراحة والتحكم! تابع استهلاكك، اشحن رصيدك، جدد باقتك، واطلع على أحدث العروض بضغطة واحدة. كل ما تحتاجه لإدارة خطك بسهولة في مكان واحد. حمّل التطبيق الآن واستمتع بتجربة غير مسبوقة!</p>
+                                   <div className="downloadLinks">
+                                          <Link href=''></Link>
+                                          <Link href=''></Link>
+                                          <Link href=''></Link>
+                                   </div>
+                            </div>
+                            <Image src={phone} alt='' />
+                     </section>
                      
               </>
        );

@@ -15,7 +15,8 @@ export default function SliderSection({children , countSlide}:sliderSection) {
        console.log(children)
 
        return (
-              <Swiper className={` | mySwiper`} 
+              <Swiper className={` | mySwiper !h-full`} 
+                     dir='ltr'
                      modules={[Autoplay]} 
                      breakpoints= {{
                             0: { slidesPerView: countSlide.sm },
@@ -26,7 +27,7 @@ export default function SliderSection({children , countSlide}:sliderSection) {
                      {children.map((section, index) => {
                      if(section.props){
                             return (
-                                   <SwiperSlide key={index} className="px-3 -z-10 relative">
+                                   <SwiperSlide key={index} className="px-3 -z-10 relative h-full">
                                           <>{section.props.children}</>
                                    </SwiperSlide>
                             )

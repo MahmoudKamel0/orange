@@ -20,7 +20,8 @@ import { sliderPhotos} from "@/app/types/types";
 export default function SliderPhotos({children,countSlide}:sliderPhotos) {
        // console.log(children)
        return (
-              <Swiper className={`${stylesSlider.slider} | mySwiper`} 
+              <Swiper className={`${stylesSlider.slider} | mySwiper !h-full`} 
+                     dir='ltr'
                      modules={[Autoplay]} 
                      breakpoints= {{
                             0: { slidesPerView: countSlide.sm },
@@ -31,7 +32,7 @@ export default function SliderPhotos({children,countSlide}:sliderPhotos) {
                      {children.map((img, index) => {
                      if(img.props && img.props.src){
                             return (
-                                   <SwiperSlide key={index} className="px-3 -z-10 relative">
+                                   <SwiperSlide key={index} className="px-3 h-full ">
                                           <Image className={`${img.props.className} w-full h-full object-cover rounded-lg`} 
                                                  src={img.props.src.src} 
                                                  alt={img.props.alt} 

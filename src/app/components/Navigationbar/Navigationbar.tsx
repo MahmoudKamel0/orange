@@ -52,7 +52,7 @@ export default function NavigationBar() {
        };
 
        return (
-              <nav className={`${stylesNavigation.navigation} | px-3 flex items-center justify-between p-3`}>
+              <nav className={`${stylesNavigation.navigation} | px-3 flex items-center justify-between p-3`} dir='ltr'>
               <div className={`${stylesNavigation.leftSide} | flex items-center justify-center`}>
                      {/* logo orange */}
                      <Link className={`${stylesNavigation.logo} | flex items-center justify-center gap-4`} href='/'>

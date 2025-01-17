@@ -28,3 +28,41 @@
        }
 
 }
+
+.title {
+       margin-bottom: 30px;
+
+       .info {
+              border: 3px solid #FF6600;
+              background: red;
+       }
+
+       // h2 {
+       //        // border-inline-start: 3px solid #FF6600;
+       //        // padding-inline-start: 13px;
+       //        padding: 7px 13px;
+       //        font-size: 17px;
+       // }
+
+       // a {
+       //        display: inline-block;
+       //        // border-inline-end: 3px solid #FF6600;
+       //        padding: 7px 13px;
+
+       // }
+}
+
+.myOrange {
+       margin-top: 160px;
+       background: linear-gradient(rgba(255, 255, 255, 0.801),rgba(255, 255, 255, 0.774)), url(../../public/images/background.png) no-repeat;
+       background-size: contain;
+       background-position: start;
+
+       h2 {
+              font: {
+                     size: 32px;
+                     weight: bold;
+              };
+              color: #FF6600;
+       }
+}
