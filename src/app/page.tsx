@@ -71,7 +71,7 @@ export default function Home() {
                      <div className={`${stylesHome.title} | px-3 w-full`}>
                             <div className="px-3 flex items-center justify-between">
                                    <h2 className="lg:w-[450px]">تمتع بأسرع تجربة إنترنت مع أقوى شبكة في مصر  تدعم احتياجاتك اليومية، سواء للعمل أو الترفيه!</h2>
-                                   <Link href='/'>عرض المزيد</Link>
+                                   <Link className="ms-7 text-nowrap" href='/'>عرض المزيد</Link>
                             </div>
                      </div>
 
@@ -102,7 +102,7 @@ export default function Home() {
                      <div className={`${stylesHome.title} | px-3 w-full`}>
                             <div className="px-3 flex items-center justify-between">
                                    <h2 className="lg:w-[450px]">تمتع بأسرع تجربة إنترنت مع أقوى شبكة في مصر  تدعم احتياجاتك اليومية، سواء للعمل أو الترفيه!</h2>
-                                   <Link href='/'>عرض المزيد</Link>
+                                   <Link className="ms-7 text-nowrap" href='/'>عرض المزيد</Link>
                             </div>
                      </div>
                      <SliderSection countSlide={{sm:1, md:2, lg:2}}>
