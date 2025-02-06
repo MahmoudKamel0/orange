@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
 import NavigationBar from "./components/Navigationbar/Navigationbar";
+import Footer from "./components/Footer/Footer";
 // import Cursor from "./components/Cursor/Cursor";
 
 const geistSans = localFont({
@@ -32,7 +33,7 @@ export default function RootLayout({
        >
               <NavigationBar />
               {children}
-
+              <Footer />
               {/* <Cursor/> */}
        </body>
        </html>

@@ -38,7 +38,7 @@ export default function Home() {
 
 
                      {/* display package 4G of orange */}
-                     <section id="offer-package-4G" className={`${stylesHome.offers_4G} | flex flex-col lg:flex-row items-center justify-center lg:justify-between w-3/4 m-auto relative z-10 rounded-lg`}>
+                     <section id="offer-package-4G" className={`${stylesHome.offers_4G} | flex flex-col gap-4 lg:flex-row items-center justify-center lg:justify-between w-3/4 m-auto relative z-10 rounded-lg`}>
                             <div className={`${stylesHome.rightSide} hidden md:block`} dir="rtl">
                                    <h2 className="font-bold">مع خدمات 4G </h2>
                                    <p>مع خدمات الـ 4G، الإنترنت بقى أسرع وأقرب ليك من أي وقت مضى:</p>

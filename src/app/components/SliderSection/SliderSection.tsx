@@ -27,7 +27,7 @@ export default function SliderSection({children , countSlide}:sliderSection) {
                      {children.map((section, index) => {
                      if(section.props){
                             return (
-                                   <SwiperSlide key={index} className="px-3 -z-10 relative h-full">
+                                   <SwiperSlide key={index} className="px-3 -z-10 relative h-full md:h-1">
                                           <Link href='/'><>{section.props.children}</></Link>
                                    </SwiperSlide>
                             )

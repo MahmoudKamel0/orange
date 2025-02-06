@@ -1,12 +1,19 @@
 
 .navigation {
        font-size: 14px;
+       * {
+              transition: .5s;
+       }
+
 .leftSide {
        .logo {
               .egy {
                      font-family: var(--English);
                      font-weight: 200;
-
+                     @media (max-width: 320px) {
+                            display: none;
+                            
+                     }
 
                      .strong {
                             font-weight: 500;
@@ -14,49 +21,25 @@
               }
        }
 
-
        .icon {
               display: flex;
               align-items: center;
               justify-content: center;
               font-weight: 500;
        }
+
+       .important_links { 
+              a span {
+                     @media (max-width: 1142px) {
+                            display: none;
+                     }
+              }
+       }
 }
 
 .rightSide {
-       // .lineHover {
-       //        height: 3px;
-       //        width: 70px;
-       //        position: absolute;
-       //        bottom: -10px;
-       //        background: #FF6600;
-       // }
-
-       // .menu:hover > .lineHover {
-       //        transform: scale3d(1);
-       // }
-
        .link {
-              // min-width: 40px;
-              // position: relative;
               font-weight: 500;
-
-              // &::before {
-              //        content: '';
-              //        position: absolute;
-              //        bottom: -10px;
-              //        right: 0;
-              //        left: 0;
-              //        background: #FF6600;
-              //        width: 0;
-              //        margin: auto;
-              //        height: 2px;
-              //        border-radius: 20px;
-              // }
-
-              // // &:nth-child(1):hover + .lineHover {
-              // //        right: 0;
-              // // }
        }
 
        &:hover .lineHover {
@@ -80,13 +63,18 @@
               border-radius: 10px;
               transition: var(--transition);
 
-              // &:hover {
-              //        transform: scale(0.95);
-              // }
-
               .span {
                      border-right: 1px solid #fff5;
                      padding-right: 15px;
+
+                     @media (max-width: 1024px) {
+                            border-right: none;
+                            padding-right: 0;
+                     }
+
+                     @media (max-width: 768px) {
+                            font-size: 11px;
+                     }
               }
        }
 }

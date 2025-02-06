@@ -1,0 +1,50 @@
+footer {
+       background: #F7F9FC;
+       direction: ltr;
+
+
+       .item {
+              h3 {
+                     font-weight: bold;
+                     color: #FF9C00;
+              }
+
+              ul li {
+                     margin-block: 10px;
+              }
+       }
+
+       .box {
+              background: #000;
+              color: #fff;
+              padding: 15px 30px;
+              border-radius: 18px;
+
+              h3 {
+                     color: #FF9C00;
+                     font-weight: bold;
+              }
+
+              p {
+                     direction: rtl;
+              }
+       }
+
+       .partBottom {
+              border-top: 1px solid rgba(0, 0, 0, 0.22);
+              .logo {
+                     .egy {
+                            font-family: var(--English);
+                            font-weight: 200;
+                            @media (max-width: 320px) {
+                                   display: none;
+                                   
+                            }
+       
+                            .strong {
+                                   font-weight: 500;
+                            }
+                     }
+              }
+       }
+}

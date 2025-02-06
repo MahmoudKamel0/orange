@@ -63,7 +63,7 @@ export default function NavigationBar() {
                      </Link>
 
                      {/* important links */}
-                     <div className="important-links | hidden lg:flex items-center justify-center ms-7 gap-6">
+                     <div className={`${stylesNavigation.important_links} | hidden lg:flex items-center justify-center ms-7 gap-6`}>
                             { navLinks.linksAboutOrange.map((link,index) => (
                                    <Link key={index} className={`${stylesNavigation.icon} | gap-3`} href={link.path}>
                                           {link.icon}
