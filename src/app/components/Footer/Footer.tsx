@@ -11,7 +11,7 @@ import Twitter from '../../../../public/icons/Twitter'
 
 export default function Footer() {
        return (
-              <footer className='px-5 lg:px-16'>
+              <footer className='mt-10 lg:mt-0 px-5 lg:px-16'>
               <div className="partTop | flex flex-col lg:flex-row items-start justify-between py-16 gap-7">
                      <div className="items-links | flex flex-wrap flex-auto gap-20">
                      <div className="item">

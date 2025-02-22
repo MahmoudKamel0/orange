@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.scss";
 import NavigationBar from "./components/Navigationbar/Navigationbar";
 import Footer from "./components/Footer/Footer";
 // import Cursor from "./components/Cursor/Cursor";
 
-const geistSans = localFont({
-       src: "./fonts/GeistVF.woff",
-       variable: "--font-geist-sans",
-       weight: "100 900",
-});
-const geistMono = localFont({
-       src: "./fonts/GeistMonoVF.woff",
-       variable: "--font-geist-mono",
-       weight: "100 900",
-});
+// const geistSans = localFont({
+//        src: "./fonts/GeistVF.woff",
+//        variable: "--font-geist-sans",
+//        weight: "100 900",
+// });
+// const geistMono = localFont({
+//        src: "./fonts/GeistMonoVF.woff",
+//        variable: "--font-geist-mono",
+//        weight: "100 900",
+// });
 
 export const metadata: Metadata = {
        title: "Orange Egypt Website",
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
        <html lang="ar" dir="rtl">
        <body
-              className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+              className={`antialiased`}
        >
               <NavigationBar />
               {children}
