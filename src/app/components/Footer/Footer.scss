@@ -4,6 +4,8 @@ footer {
 
 
        .item {
+              flex: 1 1 1fr;
+
               h3 {
                      font-weight: bold;
                      color: #FF9C00;
@@ -11,6 +13,10 @@ footer {
 
               ul li {
                      margin-block: 10px;
+              }
+
+              ul li a {
+                     font-size: 14px;
               }
        }
 

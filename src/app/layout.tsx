@@ -34,7 +34,7 @@ export default function RootLayout({
               <NavigationBar />
               {children}
               <Footer />
-              {/* <Cursor/> */}
+              {/* <Cursor/>  */}
        </body>
        </html>
        );

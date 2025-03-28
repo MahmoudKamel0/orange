@@ -13,32 +13,32 @@ export default function Footer() {
        return (
               <footer className='mt-10 lg:mt-0 px-5 lg:px-16'>
               <div className="partTop | flex flex-col lg:flex-row items-start justify-between py-16 gap-7">
-                     <div className="items-links | flex flex-wrap flex-auto gap-20">
+                     <div className="items-links | flex flex-wrap flex-auto gap-20 lg:pr-10" dir='rtl'>
                      <div className="item">
-                            <h3>Platform</h3>
+                            <h3>المنصة</h3>
                             <ul>
-                                   <li><Link href="/">Plans & Pricing</Link></li>
-                                   <li><Link href="/">Personal AI Manager</Link></li>
-                                   <li><Link href="/">AI Business Writer</Link></li>
-                                   <li><Link href="/">AI Data Processing</Link></li>
+                                   <li><Link href="/">الخطط والتسعير</Link></li>
+                                   <li><Link href="/">مدير الذكاء الاصطناعي الشخصي</Link></li>
+                                   <li><Link href="/">كاتب الأعمال بالذكاء الاصطناعي</Link></li>
+                                   <li><Link href="/">معالجة البيانات بالذكاء الاصطناعي</Link></li>
                             </ul>
                      </div>
 
                      <div className="item">
-                            <h3>Company</h3>
+                            <h3>الشركة</h3>
                             <ul>
-                                   <li><Link href="/">About Us</Link></li>
-                                   <li><Link href="/">Work With Us</Link></li>
-                                   <li><Link href="/">Blog & News</Link></li>
+                                   <li><Link href="/">من نحن</Link></li>
+                                   <li><Link href="/">العمل معنا</Link></li>
+                                   <li><Link href="/">المدونة والأخبار</Link></li>
                             </ul>
                      </div>
 
                      <div className="item">
-                            <h3>Resources</h3>
+                            <h3>الموارد</h3>
                             <ul>
-                                   <li><Link href="/">Documentation</Link></li>
-                                   <li><Link href="/">Free Demo</Link></li>
-                                   <li><Link href="/">Press Conferences</Link></li>
+                                   <li><Link href="/">التوثيق</Link></li>
+                                   <li><Link href="/">عرض تجريبي مجاني</Link></li>
+                                   <li><Link href="/">المؤتمرات الصحفية</Link></li>
                             </ul>
                      </div>
                      

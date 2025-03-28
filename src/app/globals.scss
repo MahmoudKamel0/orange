@@ -12,6 +12,9 @@
 
        --transition: 0.5s;
 } body {
+       & :is(*) {
+              z-index: 10;
+       }
        &::-webkit-scrollbar {
               width: 10px;
        }

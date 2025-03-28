@@ -21,6 +21,8 @@ import Link from "next/link"
 import phone from '../../public/images/phone.png'
 import photo1 from '../../public/images/scetion 2.png'
 import photo2 from '../../public/images/Orange Tariffs .png'
+import gooleplayIcon from '../../public/icons/googleplay.svg'
+import appstoreIcon from '../../public/icons/appstore.svg'
 
 export default function Home() {
        return (
@@ -127,10 +129,9 @@ export default function Home() {
                             <div className="txt | lg:w-1/2">
                                    <h2>حمّل تطبيق My Orange واستمتع بالتحكم الكامل في خطك!</h2>
                                    <p>مع تطبيق My Orange مصر، استكشف عالمًا من الراحة والتحكم! تابع استهلاكك، اشحن رصيدك، جدد باقتك، واطلع على أحدث العروض بضغطة واحدة. كل ما تحتاجه لإدارة خطك بسهولة في مكان واحد. حمّل التطبيق الآن واستمتع بتجربة غير مسبوقة!</p>
-                                   <div className="downloadLinks">
-                                          <Link href=''></Link>
-                                          <Link href=''></Link>
-                                          <Link href=''></Link>
+                                   <div className="downloadLinks | flex gap-3 mt-8">
+                                          <a href='https://play.google.com/store/apps/details?id=com.orange.mobinilandme&hl=ar&pli=1' target="_blank"><Image src={gooleplayIcon} alt="my orange google play" loading="lazy" /></a>
+                                          <a href='https://apps.apple.com/eg/app/my-orange-egypt/id942568333' target="_blank"><Image src={appstoreIcon} alt="my orange app store" loading="lazy" /></a>
                                    </div>
                             </div>
                             <Image src={phone} alt='' />

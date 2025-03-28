@@ -31,16 +31,16 @@ export default function NavigationBar() {
               ],
 
               linksAboutOrange: [
-                     {label: "Orange store", 
+                     {label: "متجر اورنج", 
                             path: "/" , 
                             icon: <OrangeStore size={30} />
                      },
 
-                     {label: "Chat us", 
+                     {label: "تواصل معانا", 
                             path: "/" , icon: 
                             <ChatUs size={30} />},
 
-                     {label: "Location", 
+                     {label: "الموقع", 
                             path: "/" , icon: 
                             <Location size={30} />
                      },
