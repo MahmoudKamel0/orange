@@ -76,10 +76,10 @@ export default function NavigationBar() {
 
               <div className={`${stylesNavigation.rightSide} | flex flex-col lg:static lg:flex-row lg:w-fit lg:flex items-center justify-between`}>
                      {/* navigation menu */}
-                     <menu className={`${isToggleMenu ? 'flex' : 'hidden'} absolute lg:relative top-16 left-0 lg:top-0 lg:right-0 w-full bg-white border-t-2 lg:border-t-0 lg:w-fit z-10 lg:flex flex-col lg:flex-row gap-5 py-10 lg:py-0 items-center justify-center lg:gap-7 ms-7`} style={{direction: 'rtl'}}>
+                     <menu className={`${!isToggleMenu ? 'invisible opacity-0' : 'visible opacity-100'} absolute lg:relative top-16 left-0 lg:top-0 lg:right-0 w-full bg-white border-t-2 lg:border-t-0 lg:w-fit z-10 flex flex-col lg:flex-row gap-5 py-10 lg:py-0 items-center justify-center lg:gap-7 ms-7 overflow-hidden lg:visible lg:opacity-100`} style={{direction: 'rtl'}}>
                             {navLinks.navigation.map((link,index) => (
                                    <li key={index}>
-                                          <Link className={`${stylesNavigation.link} | flex items-center justify-center`} 
+                                          <Link className={`${stylesNavigation.link} | flex items-center justify-center overflow-hidden`} 
                                           href={link.path} onMouseMove={(e) => handleIndicator(e.currentTarget)}>
                                                  {link.label} <span className='ms-1 mt-1'>{link?.icon}</span>
                                           </Link>

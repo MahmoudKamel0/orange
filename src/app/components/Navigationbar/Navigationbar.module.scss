@@ -42,6 +42,10 @@
               font-weight: 500;
        }
 
+       menu {
+              transition: 0.5s;
+       }
+
        &:hover .lineHover {
               transform: scaleX(1);
        }

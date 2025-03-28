@@ -13,7 +13,7 @@ export default function Footer() {
        return (
               <footer className='mt-10 lg:mt-0 px-5 lg:px-16'>
               <div className="partTop | flex flex-col lg:flex-row items-start justify-between py-16 gap-7">
-                     <div className="items-links | flex flex-wrap flex-auto gap-20 lg:pr-10" dir='rtl'>
+                     <div className="items-links | flex flex-col lg:flex-row flex-auto gap-20 lg:pr-10 w-full" dir='rtl'>
                      <div className="item">
                             <h3>المنصة</h3>
                             <ul>
@@ -43,12 +43,12 @@ export default function Footer() {
                      </div>
                      
                      <div className="item">
-                            <h3>Legal</h3>
+                            <h3>الشؤون القانونية</h3>
                             <ul>
-                                   <li><Link href="/">Terms of Service</Link></li>
-                                   <li><Link href="/">Privacy Policy</Link></li>
-                                   <li><Link href="/">Cookies Policy</Link></li>
-                                   <li><Link href="/">Data Processing</Link></li>
+                                   <li><Link href="/">شروط الخدمة</Link></li>
+                                   <li><Link href="/">سياسة الخصوصية</Link></li>
+                                   <li><Link href="/">سياسة الخصوصية</Link></li>
+                                   <li><Link href="/">معالجة البيانات</Link></li>
                             </ul>
                      </div>
                      </div>
@@ -69,9 +69,9 @@ export default function Footer() {
                      </Link>
 
                      <div className="social | inline-flex gap-3 md:gap-7">
-                            <Link href="/"><Instagram size={35} /></Link>
-                            <Link href="/"><Facebook size={35} /></Link>
-                            <Link href="/"><Twitter size={35} /></Link>
+                            <a href="https://www.instagram.com/Orange_Egypt" target='_blank'><Instagram size={35} /></a>
+                            <a href="https://www.facebook.com/OrangeEgyptOfficial" target='_blank'><Facebook size={35} /></a>
+                            <a href="https://x.com/Orange_Egypt" target='_blank'><Twitter size={35} /></a>
                      </div>
               </div>
               </footer>
